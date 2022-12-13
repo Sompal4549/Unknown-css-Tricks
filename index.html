@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .customInput::-webkit-input-placeholder {
+        color: blue;
+        font-weight: 500;
+        font-size: 25px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      input {
+        width: 300px;
+        height: 30px;
+      }
+      .caretColor {
+        caret-color: aqua;
+      }
+      .selection-color::selection {
+        color: red;
+        background-color: blue;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .selection-color {
+        font-size: 15px;
+        font-weight: 300;
+      }
+      li:not(:last-child) {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Unknown CSS</h1>
+      <section class="custom-placeholder">
+        We can style input placeholder with "::-webkit-input-placeholder". This
+        is very useful trick when you want your inputs to look different.
+        <input
+          class="customInput"
+          type="text"
+          placeholder="Please enter your name here"
+        />
+      </section>
+      <section>
+        <p>In this section you gonna learn how to change the cursor color.</p>
+        <p>
+          To change the cursor color we use "caret-color" property in the css
+        </p>
+        <input
+          class="caretColor"
+          type="text"
+          placeholder="type 'something' in this input"
+        />
+      </section>
+      <section>
+        <p>
+          To Change the Text selection Color we use ::selection selector to
+          override the default text selection color.
+        </p>
+        <p>Select this paragraph using mouse.</p>
+        <p class="selection-color">
+          Now Select this paragraph you may see the difference.
+        </p>
+      </section>
+      <section>
+        <p>The :not selector</p>
+        <p>
+          By using the :not selection we can specify where the style should not
+          apply.
+        </p>
+        <ul>
+          <li class="list">element1</li>
+          <li class="list">element2</li>
+          <li class="list">element3</li>
+          <li class="list">element4</li>
+          <li class="list">element5</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
