@@ -32,6 +32,22 @@
       li:not(:last-child) {
         color: green;
       }
+      .noArrow::-webkit-inner-spin-button,
+      .noArrow::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+      .no-border input {
+        border: none;
+      }
+      .without-scrollbar{
+        width: 400px;
+        height: 200px;
+        overflow-x: scroll;
+        background-color: brown;
+      }
+      .without-scrollbar::-webkit-scrollbar{
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -80,6 +96,57 @@
           <li class="list">element4</li>
           <li class="list">element5</li>
         </ul>
+      </section>
+      <section>
+        <p>
+          In this section we going to learn how to remove the arrow from the
+          type number input.
+        </p>
+        <p>
+          We use ::-webkit-outer-spin-button and ::-webkit-inner-spin-button
+          selector.
+        </p>
+        <input
+          type="number"
+          placeholder="I am number input without arrows"
+          max="10"
+          min="3"
+          class="noArrow"
+          maxlength="10"
+        />
+        <input type="number" placeholder="I am number input with arrows" />
+      </section>
+      <section class="no-border">
+        <p>
+          In this section you are going to learn how to remove the border of
+          input.
+        </p>
+        <p>
+          for removing the outline of the input we use outline property and the
+          none value. "border:none"
+        </p>
+        <input type="text" placeholder="this input does not have border" />
+      </section>
+      <section >
+        <p>
+          This box has scroll bar but hidden. We can hide the scroll bar using
+          the CSS property.
+        </p>
+        <p>To hide the Scrollbar we use ::-webkit-scrollbar selector.</p>
+        <p class="without-scrollbar">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est illo
+          perferendis, enim dolore nam laborum porro reprehenderit tenetur
+          itaque, dignissimos, quod cumque eveniet quo. Qui molestias similique
+          corrupti ut quisquam, magni illo asperiores, dolores porro cumque
+          culpa natus quasi fugit sapiente! Eius, itaque fugit pariatur repellat
+          quos aut ipsum. In molestias facilis nulla veniam quaerat officiis,
+          cupiditate nobis ex praesentium veritatis reiciendis corporis
+          perferendis vel totam impedit ipsum dicta laboriosam illum, animi
+          exercitationem? Numquam ad quis dignissimos eius, consequuntur
+          aspernatur, nobis, possimus fugit commodi itaque molestias
+          necessitatibus dicta nihil? Consequuntur hic, tenetur distinctio iure
+          illo repellat. Accusamus maxime corrupti quas.
+        </p>
       </section>
     </main>
   </body>
